@@ -1,0 +1,9 @@
+bin/**
+build/**
+source/Lib/CMSIS/Core_A
+source/Lib/CMSIS/Device
+source/Lib/CMSIS/DSP
+source/Lib/CMSIS/Lib
+source/Lib/CMSIS/NN
+source/Lib/CMSIS/RTOS
+source/Lib/CMSIS/RTOS2
