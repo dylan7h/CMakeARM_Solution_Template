@@ -4,6 +4,9 @@
 # Show Compile Log
 VERBOSE		:= OFF
 
+# CMAKE_EXPORT_COMPILE_COMMANDS
+EXPORT_COMPILE_COMMANDS := ON
+
 # Select Build Type( Debug | Release )
 BUILD_TYPE := Debug
 
@@ -32,7 +35,9 @@ all: config
 #=============================================================================
 # Generate CMake Build System
 config:
-	cmake -B$(BUILD_DIR) -H$(HOME_DIR) -G $(GENERATOR) -DCMAKE_BUILD_TYPE=$(BUILD_TYPE) -DCMAKE_VERBOSE_MAKEFILE=$(VERBOSE)
+	cmake -B$(BUILD_DIR) -H$(HOME_DIR) -G $(GENERATOR) \
+	-DCMAKE_BUILD_TYPE=$(BUILD_TYPE) -DCMAKE_VERBOSE_MAKEFILE=$(VERBOSE) \
+	-DCMAKE_EXPORT_COMPILE_COMMANDS=$(EXPORT_COMPILE_COMMANDS)
 .PHONY : config
 
 #=============================================================================

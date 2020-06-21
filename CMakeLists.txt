@@ -1,19 +1,11 @@
 # CMake Minimum Required Version Information
 cmake_minimum_required(VERSION 3.15)
 
+# Set Build Date
 string(TIMESTAMP TODAY "%Y%m%d")
 
-# Include Profile Information
-include("CMakeTools/Environment/Profile.cmake")
-
-# Set ToolChain( Compiler Information )
-set(CMAKE_TOOLCHAIN_FILE            "CMakeTools/Environment/ToolChain.cmake")
-
-# Change Default Build Options
-set(CMAKE_USER_MAKE_RULES_OVERRIDE  "CMakeTools/Environment/Build_Type.cmake")
-
-# Export Compile Command
-set(CMAKE_EXPORT_COMPILE_COMMANDS   ON)
+# Include Vendor Profile
+include("CMakeTools/Environment/Vendor/stm32f303re.cmake")
 
 # Describe project information.
 project(
@@ -24,9 +16,6 @@ project(
     # Project Language
     LANGUAGES       C ASM
 )
-
-# Inculde Pre Defined Build Options
-include("CMakeTools/Environment/Build_Option.cmake")
 
 # Change Default Build Result Path
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY          ${CMAKE_HOME_DIRECTORY}/bin/App)    # *.exe | *.out | *.elf | *.axf | *.dll | *.so
