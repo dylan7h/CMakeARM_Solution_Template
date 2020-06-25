@@ -7,7 +7,10 @@
             ],
             "defines": [
             ],
-            "compilerPath": "C:/msys64/mingw32/bin/clang++.exe",
+            "compilerPath": "C:/Keil_v5/ARM/ARMCLANG/bin/armclang.exe",
+            "compilerArgs": [
+                "--target=arm-arm-none-eabi"
+            ],
             "cStandard": "c99",
             "cppStandard": "c++17",
             "intelliSenseMode": "clang-x86",

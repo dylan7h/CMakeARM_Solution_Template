@@ -115,6 +115,16 @@ typedef enum
   #ifndef __packed
     #define __packed __attribute__((__packed__))
   #endif /* __packed */
+#else
+#include "cmsis_compiler.h"
+#ifndef __weak
+    #define __weak   __WEAK
+#endif /* __weak */
+
+#ifndef __packed
+    #define __packed __PACKED
+#endif /* __packed */
+
 #endif /* __GNUC__ */
 
 
