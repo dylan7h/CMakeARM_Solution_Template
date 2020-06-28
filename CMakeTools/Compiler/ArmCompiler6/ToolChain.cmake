@@ -16,12 +16,12 @@ if(WIN32)
     set(CMAKE_LINKER            "${tools}/bin/armlink.exe")
 else()
     ###################### Linux ############################
-    set(tools                   "[ Arm Compiler Path ]")
+    set(tools                   "/usr/local/DS-5_v5.29.3/sw/ARMCompiler6.10.1")
 
     set(CMAKE_ASM_COMPILER      "${tools}/bin/armasm")
     set(CMAKE_C_COMPILER        "${tools}/bin/armclang")
     set(CMAKE_CXX_COMPILER      "${tools}/bin/armclang")
-    set(CMAKE_FROMELF           "${tools}/bin/fromelf.")
+    set(CMAKE_FROMELF           "${tools}/bin/fromelf")
 
     set(CMAKE_AR                "${tools}/bin/armar")
     set(CMAKE_CXX_COMPILER_AR   "${tools}/bin/armar")
